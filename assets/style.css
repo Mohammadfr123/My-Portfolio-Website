@@ -1,0 +1,40 @@
+/*GLOBAL VARIABLES */
+:root{
+
+    --primary:#2563eb;
+    --secondary:#0f172a;
+    --light:#f8fafc;
+    --white:#ffffff;
+    --text:#334155;
+}
+
+/* CSS RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:var(--light);
+
+    color:var(--text);
+
+}
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
