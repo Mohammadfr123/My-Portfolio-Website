@@ -32,9 +32,25 @@ body{
 }
 
 img{
-
-    max-width:100%;
-
     display:block;
+    max-width:60%;
+}
 
+.image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  object-position: center; 
+}   
+
+
+ footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #113f5e;
+  padding: 8px;
+  text-align: center;
+  z-index: 1000;
 }
