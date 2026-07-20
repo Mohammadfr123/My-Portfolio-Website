@@ -3,269 +3,479 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Portfolio Website of Mohammad Farhaan Khuroolah Hossen">
-    <meta name="author"
-        content="Mohammad Farhaan Khuroolah Hossen">
-    <title>Farhaan's HomePage</title>
+    <meta name="description" content="Portfolio Website of Mohammad Farhaan Khuroolah Hossen">
+    <meta name="author" content="Mohammad Farhaan Khuroolah Hossen">
+    <title>Farhaan | Portfolio</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
-<link rel="stylesheet"
-        href="C:\Users\User\My-Portfolio-Website\My-Portfolio-Website\assets\style.css">
-<script src="C:\Users\User\My-Portfolio-Website\My-Portfolio-Website\assets\script.js"></script>
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
 </head>
-<body style="background: linear-gradient(90deg,rgba(0, 179, 179, 1) 1%, rgba(22, 204, 224, 1) 16%, rgba(21, 216, 230, 1) 35%, rgba(83, 137, 237, 1) 68%, rgba(35, 61, 110, 1) 99%);">
+<body>
 
-  <!-- Navbar -->
-<nav class="navbar navbar-expand-lg fixed-top">
+    <!-- Scroll progress bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
 
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
         <div class="container">
-
-            <a class="navbar-brand fw-bold" href="#">
-                Farhaan's Portfolio
+            <a class="navbar-brand fw-bold" href="#home">
+                <span class="brand-accent">&lt;</span>Farhaan<span class="brand-accent">/&gt;</span>
             </a>
 
-            <button class="navbar-toggler"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbar">
-
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-
             </button>
 
-            <div class="collapse navbar-collapse"
-                id="navbar">
-
-                <ul class="navbar-nav ms-auto">
-
-                    <li class="nav-item">
-
-                        <a href="#home"
-                            class="nav-link">
-                            Home
-                        </a>
-
-                    </li>
-
-                    <li class="nav-item">
-
-                        <a href="#about"
-                            class="nav-link">
-                            About
-                        </a>
-
-                    </li>
-
-                    <li class="nav-item">
-
-                        <a href="#skills"
-                            class="nav-link">
-                            Skills
-                        </a>
-
-                    </li>
-
-                    <li class="nav-item">
-
-                        <a href="#projects"
-                            class="nav-link">
-                            Projects
-                        </a>
-
-                    </li>
-
-                    <li class="nav-item">
-
-                        <a href="#contact"
-                            class="nav-link">
-                            Contact
-                        </a>
-
-                    </li>
-
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+                    <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
-
-                <button class="btn btn-primary ms-lg-4">
-
-                    Hire Me
-
-                </button>
-
+                <a href="#contact" class="btn btn-primary ms-lg-4 mt-3 mt-lg-0">Hire Me</a>
             </div>
-
         </div>
     </nav>
- 
-</div>
 
-<!-- Hero Section -->
-    <Hero
-        id="home"
-        class="hero d-flex align-items-center">
+    <!-- Hero Section -->
 
-        <div class="container">
+    <section id="home" class="hero d-flex align-items-center">
+        <div class="hero-bg">
+            <div class="hero-orb hero-orb-1"></div>
+            <div class="hero-orb hero-orb-2"></div>
+            <div class="hero-orb hero-orb-3"></div>
+        </div>
 
-            <div class="row align-items-center">
-
-                <!-- Left Side -->
-
-                <div class="col-lg-6">
-
-                </div class="Space"><br></br></div>
-
-                    <h1 class="display-3 fw-bold">
-
+        <div class="container position-relative">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6 hero-content">
+                    <p class="hero-greeting fade-in">Hello, I'm</p>
+                    <h1 class="display-3 fw-bold hero-name fade-in delay-1">
                         Mohammad <br>
-                         Farhaan
-                         Hossen
-                        Khuroolah
-
+                        <span class="text-gradient">Farhaan Hossen</span>
                     </h1>
-
-                    <h3 class="mb-4">
-
-                        Computer Science Student
-
+                    <h3 class="hero-role fade-in delay-2">
+                        <span id="typedText"></span><span class="typed-cursor">|</span>
                     </h3>
-
-                    <p class="lead">
-                      <strong>Passionate about creating beautiful,responsive and modern web applications,
-                         AI solutions and user-friendly experiences.</strong>
+                    <p class="lead hero-desc fade-in delay-3">
+                        Passionate about creating beautiful, responsive and modern web applications,
+                        AI solutions and user-friendly experiences.
                     </p>
 
-                    <div class="mt-4">
-
-                        <a href="assets/images/CV/CV_FarhaanKhuroolah (2).pdf"
-                            class="btn btn-primary btn-lg">
-
-                            Download CV
-
+                    <div class="hero-actions fade-in delay-4">
+                        <a href="assets/images/CV/CV_FarhaanKhuroolah (2).pdf" class="btn btn-primary btn-lg" download>
+                            <i class="bi bi-download me-2"></i>Download CV
                         </a>
-
-                        <a href="#contact"
-                            class="btn btn-outline-primary btn-lg ms-3">
-
-                            Contact Me
-
+                        <a href="#contact" class="btn btn-outline-light btn-lg ms-3">
+                            <i class="bi bi-envelope me-2"></i>Contact Me
                         </a>
-
                     </div>
 
-                    <div class="mt-5">
-
-                        <a href="https://github.com/Mohammadfr123">
-                            <i class="bi bi-github fs-2 me-3"></i>
+                    <div class="hero-social fade-in delay-5">
+                        <a href="https://github.com/Mohammadfr123" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                            <i class="bi bi-github"></i>
                         </a>
-
-                        <a href="https://www.linkedin.com/in/farhaan-khuroolah-68a613363">
-                            <i class="bi bi-linkedin fs-2 me-3"></i>
+                        <a href="https://www.linkedin.com/in/farhaan-khuroolah-68a613363" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <i class="bi bi-linkedin"></i>
                         </a>
-
-                        <a href="https://www.instagram.com/_mohammad_fr_/">
-                            <i class="bi bi-instagram fs-2"></i>
+                        <a href="https://www.instagram.com/_mohammad_fr_/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <i class="bi bi-instagram"></i>
                         </a>
-
                     </div>
-
                 </div>
 
-                <!-- Right Side -->
-
-                <div class="col-lg-5 text-center">
-
-                    <img
-                        src="assets/images/profilePic.png"
-                        class="img-fluid hero-image"
-                        alt="Farhaan">
-                        
-
+                <div class="col-lg-6 text-center hero-visual fade-in delay-2">
+                    <div class="hero-image-wrapper">
+                        <div class="hero-image-ring"></div>
+                        <div class="hero-image-ring hero-image-ring-2"></div>
+                        <img src="assets/images/profilePic.png" class="hero-image" alt="Mohammad Farhaan Khuroolah Hossen">
+                    </div>
                 </div>
-
             </div>
 
+            <a href="#about" class="scroll-indicator" aria-label="Scroll to about section">
+                <span class="scroll-mouse">
+                    <span class="scroll-wheel"></span>
+                </span>
+                <span class="scroll-text">Scroll Down</span>
+            </a>
         </div>
+    </section>
 
-      </Hero>
-
-
-
-<section id="about" class="py-5">
- <div class="col-lg-8">
+    <!-- About Section -->
+    <section id="about" class="section-padding">
         <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Get To Know Me</span>
+                <h2 class="section-title">About Me</h2>
+            </div>
 
-                <h2 class="fw-bold mb-4">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-4 text-center reveal">
+                    <div class="about-image-wrapper">
+                        <img src="assets/images/dp.png" class="about-image" alt="Farhaan portrait">
+                    </div>
+                </div>
 
-                    About Me
-
-                </h2>
-
-            <div class="row align-items-center">
-              <!-- Left -->
-
-              <div class="col-lg-4 text-center mb-4 mb-lg-0">
-                 <img
-                    src="C:\Users\User\My-Portfolio-Website\My-Portfolio-Website\assets\images\dp.png"
-                    class="img-fluid rounded-4 shadow"
-                    alt="Farhaan">
-              </div>
-          
-                         <!-- Right -->
-
-                <div class="col-lg-8">
-                 <p>
-
-                    Hello! I'm <strong>Mohammad Farhaan Khuroolah Hossen</strong>,
-                    a passionate Computer Science student at ALCHE, Mauritius.
-                    I enjoy creating responsive websites, learning Artificial
-                    Intelligence, solving programming challenges, and building
-                    projects that improve people's lives.
-
-                 </p>
-
-                   <p>
-
-                    My goal is to become a skilled Full Stack Developer and AI
-                    Engineer while continuously improving my technical,
-                    leadership and problem-solving skills.
-
+                <div class="col-lg-8 reveal">
+                    <p class="about-text">
+                        Hello! I'm <strong>Mohammad Farhaan Khuroolah Hossen</strong>,
+                        a passionate Computer Science student at ALCHE, Mauritius.
+                        I enjoy creating responsive websites, learning Artificial Intelligence,
+                        solving programming challenges, and building projects that improve people's lives.
                     </p>
+                    <p class="about-text">
+                        My goal is to become a skilled Full Stack Developer and AI Engineer while
+                        continuously improving my technical, leadership and problem-solving skills.
+                    </p>
+
+                    <div class="row g-4 mt-2">
+                        <div class="col-sm-6">
+                            <div class="info-card">
+                                <i class="bi bi-mortarboard"></i>
+                                <div>
+                                    <h5>Education</h5>
+                                    <p>Computer Science @ ALCHE, Mauritius</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="info-card">
+                                <i class="bi bi-geo-alt"></i>
+                                <div>
+                                    <h5>Location</h5>
+                                    <p>Mauritius</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="info-card">
+                                <i class="bi bi-briefcase"></i>
+                                <div>
+                                    <h5>Focus</h5>
+                                    <p>Full Stack & AI Development</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="info-card">
+                                <i class="bi bi-envelope"></i>
+                                <div>
+                                    <h5>Email</h5>
+                                    <p>f.khuroolah@alustudent.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-   </div>
+    </section>
 
-<footer
+    <!-- Skills Section -->
+    <section id="skills" class="section-padding section-alt">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">What I Know</span>
+                <h2 class="section-title">My Skills</h2>
+            </div>
 
-        <div>
-            <p>
-                &copy; 2024 Farhaan's Portfolio. All rights reserved.
-            </p>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4 reveal">
+                    <div class="skill-card">
+                        <div class="skill-icon"><i class="bi bi-code-slash"></i></div>
+                        <h4>Frontend</h4>
+                        <p>HTML, CSS, JavaScript, Bootstrap, Responsive Design</p>
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-width="85"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 reveal">
+                    <div class="skill-card">
+                        <div class="skill-icon"><i class="bi bi-server"></i></div>
+                        <h4>Backend</h4>
+                        <p>Python, Node.js, APIs, Database fundamentals</p>
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-width="70"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 reveal">
+                    <div class="skill-card">
+                        <div class="skill-icon"><i class="bi bi-cpu"></i></div>
+                        <h4>AI & Data</h4>
+                        <p>Machine Learning basics, Python, Problem Solving</p>
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-width="75"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 reveal">
+                    <div class="skill-card">
+                        <div class="skill-icon"><i class="bi bi-git"></i></div>
+                        <h4>Tools</h4>
+                        <p>Git, GitHub, VS Code,Cursor, Postman</p>
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-width="80"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 reveal">
+                    <div class="skill-card">
+                        <div class="skill-icon"><i class="bi bi-palette"></i></div>
+                        <h4>UI/UX</h4>
+                        <p>Clean layouts, modern design, user-centered thinking</p>
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-width="78"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 reveal">
+                    <div class="skill-card">
+                        <div class="skill-icon"><i class="bi bi-people"></i></div>
+                        <h4>Soft Skills</h4>
+                        <p>Leadership, teamwork, communication, adaptability</p>
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-width="90"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tech-stack reveal mt-5">
+                <h4 class="text-center mb-4">Technologies I Work With</h4>
+                <div class="tech-icons">
+                    <span class="tech-badge"><i class="bi bi-filetype-html"></i> HTML</span>
+                    <span class="tech-badge"><i class="bi bi-filetype-css"></i> CSS</span>
+                    <span class="tech-badge"><i class="bi bi-filetype-js"></i> JavaScript</span>
+                    <span class="tech-badge"><i class="bi bi-bootstrap"></i> Bootstrap</span>
+                    <span class="tech-badge"><i class="bi bi-filetype-py"></i> Python</span>
+                    <span class="tech-badge"><i class="bi bi-github"></i> GitHub</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section-padding">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">My Work</span>
+                <h2 class="section-title">Featured Projects</h2>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4 reveal">
+                    <article class="project-card">
+                        <div class="project-image">
+                            <div class="project-placeholder">
+                                <img src="assets/images/Projectspics/Wireframe for Portfolio.png" alt="Portfolio Website">
+                            </div>
+                            <div class="project-overlay">
+                                <a href="#" class="project-link" aria-label="View project"><i class="bi bi-box-arrow-up-right"></i></a>
+                                <a href="https://github.com/Mohammadfr123" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View on GitHub"><i class="bi bi-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <h4>Portfolio Website</h4>
+                            <p>A modern, responsive personal portfolio built with HTML, CSS, and JavaScript.</p>
+                            <div class="project-tags">
+                                <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-md-6 col-lg-4 reveal">
+                    <article class="project-card">
+                        <div class="project-image">
+                            <div class="project-placeholder">
+                                <i class="bi bi-robot"></i>
+                            </div>
+                            <div class="project-overlay">
+                                <a href="#" class="project-link" aria-label="View project"><i class="bi bi-box-arrow-up-right"></i></a>
+                                <a href="https://github.com/Mohammadfr123" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View on GitHub"><i class="bi bi-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <h4>AI Learning Project</h4>
+                            <p>Exploring machine learning concepts and building intelligent solutions with Python.</p>
+                            <div class="project-tags">
+                                <span>Python</span><span>AI</span><span>ML</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-md-6 col-lg-4 reveal">
+                    <article class="project-card">
+                        <div class="project-image">
+                            <div class="project-placeholder">
+                                <i class="bi bi-laptop"></i>
+                            </div>
+                            <div class="project-overlay">
+                                <a href="#" class="project-link" aria-label="View project"><i class="bi bi-box-arrow-up-right"></i></a>
+                                <a href="https://github.com/Mohammadfr123" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View on GitHub"><i class="bi bi-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <h4>Web Application</h4>
+                            <p>Interactive web app focused on clean UI, performance, and great user experience.</p>
+                            <div class="project-tags">
+                                <span>JavaScript</span><span>Bootstrap</span><span>API</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <div class="text-center mt-5 reveal">
+                <a href="https://github.com/Mohammadfr123" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary btn-lg">
+                    <i class="bi bi-github me-2"></i>View All on GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+<section id="Hobbies" class="section-padding">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">My Interests</span>
+                <h2 class="section-title">Hobbies & Interests</h2>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4 reveal">
+                    <div class="hobby-card">
+                        <i class="bi bi-shuffle"></i>
+                        <h4>MMA</h4>
+                        <p>Learning martial arts and improving physical fitness.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 reveal">
+                    <div class="hobby-card">
+                        <i class="bi bi-code-slash"></i>
+                        <h4>Coding Challenges</h4>
+                        <p>Solving problems on platforms like LeetCode and HackerRank to improve skills.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 reveal">
+                    <div class="hobby-card">
+                        <i class="bi bi-camera"></i>
+                        <h4>Photography</h4>
+                        <p>Capturing moments and exploring creative photography techniques.</p>
+                    </div>
+                </div>
+            </div>
         </div>
 
+
+
+
+
+
+
+
+
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding section-alt">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Get In Touch</span>
+                <h2 class="section-title">Contact Me</h2>
+            </div>
+
+            <div class="row g-5">
+                <div class="col-lg-5 reveal">
+                    <p class="contact-intro">
+                        Have a project in mind or want to collaborate? I'd love to hear from you.
+                        Send me a message and I'll get back to you as soon as possible.
+                    </p>
+
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="bi bi-envelope-fill"></i>
+                            <div>
+                                <h5>Email</h5>
+                                <p>f.khuroolah@alustudent.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="bi bi-geo-alt-fill"></i>
+                            <div>
+                                <h5>Location</h5>
+                                <p>Mauritius</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="bi bi-linkedin"></i>
+                            <div>
+                                <h5>LinkedIn</h5>
+                                <p>farhaan-khuroolah</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-7 reveal">
+                    <form id="contactForm" class="contact-form" novalidate>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="name" class="form-label">Your Name</label>
+                                <input type="text" class="form-control" id="name" placeholder="John Doe" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="email" class="form-label">Your Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="john@example.com" required>
+                            </div>
+                            <div class="col-12">
+                                <label for="subject" class="form-label">Subject</label>
+                                <input type="text" class="form-control" id="subject" placeholder="Project Inquiry" required>
+                            </div>
+                            <div class="col-12">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea class="form-control" id="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary btn-lg w-100">
+                                    <i class="bi bi-send me-2"></i>Send Message
+                                </button>
+                            </div>
+                        </div>
+                        <div id="formFeedback" class="form-feedback mt-3" role="status"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-brand">&copy; 2026 Farhaan's Portfolio. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="https://github.com/Mohammadfr123" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="bi bi-github"></i></a>
+                    <a href="https://www.linkedin.com/in/farhaan-khuroolah-68a613363" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                    <a href="https://www.instagram.com/_mohammad_fr_/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                </div>
+            </div>
+        </div>
     </footer>
- 
 
+    <!-- Back to top -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <i class="bi bi-arrow-up"></i>
+    </button>
 
-
-
-
-
- 
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
-   <script src="assets/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/script.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
