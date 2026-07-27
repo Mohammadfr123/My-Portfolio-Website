@@ -542,7 +542,7 @@ a {
 .info-card:hover {
     transform: translateY(-4px);
     border-color: var(--primary);
-    box-shadow: 0 8px 30px rgba(37, 99, 235, 0.15);
+    box-shadow: 0 8px 30px rgba(11, 83, 239, 0.15);
 }
 
 .info-card i {
@@ -775,6 +775,410 @@ a {
     font-weight: 500;
 }
 
+/* =====================================
+HOBBIES AND INTEREST SECTION
+========================================*/
+.hobby-filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-bottom: 2.5rem;
+}
+
+.hobby-filter-btn {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.7);
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    padding: 0.55rem 1.25rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.hobby-filter-btn:hover {
+    color: var(--white);
+    border-color: var(--primary);
+    transform: translateY(-2px);
+}
+
+.hobby-filter-btn.active {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    border-color: transparent;
+    color: var(--white);
+    box-shadow: 0 8px 24px rgba(37, 99, 235, 0.35);
+}
+
+.hobby-col {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.hobby-col.hobby-hidden {
+    display: none;
+}
+
+.hobby-card {
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    height: 100%;
+    transition: var(--transition);
+}
+
+.hobby-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+    border-color: rgba(37, 99, 235, 0.3);
+}
+
+.hobby-media {
+    position: relative;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    background: linear-gradient(135deg, #1e293b, #334155);
+}
+
+.hobby-fallback {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: rgba(255, 255, 255, 0.18);
+}
+
+.hobby-fallback i,
+.hobby-fallback .emoji-icon {
+    line-height: 1;
+}
+
+.hobby-fallback .emoji-icon {
+    font-size: 3rem;
+    filter: grayscale(0.4) opacity(0.5);
+}
+
+.hobby-media img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.hobby-card:hover .hobby-media img {
+    transform: scale(1.08);
+}
+
+.hobby-expand {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(15, 23, 42, 0.7);
+    border: 1px solid var(--glass-border);
+    border-radius: 50%;
+    color: var(--white);
+    font-size: 1rem;
+    opacity: 0;
+    transform: translateY(-6px);
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.hobby-card:hover .hobby-expand {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hobby-expand:hover {
+    background: var(--primary);
+}
+
+.hobby-body {
+    padding: 1.5rem;
+    position: relative;
+}
+
+.hobby-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: var(--white);
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.hobby-badge .emoji-icon {
+    font-size: 1.3rem;
+}
+
+.hobby-body h4 {
+    color: var(--white);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.hobby-body p {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* ---- Lightbox / pop-up gallery ---- */
+.hobby-lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem;
+    background: rgba(8, 12, 22, 0.92);
+    backdrop-filter: blur(12px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.hobby-lightbox.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.lightbox-content {
+    max-width: 720px;
+    width: 100%;
+    max-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    background: var(--secondary);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    transform: scale(0.94);
+    transition: transform 0.3s ease;
+}
+
+.hobby-lightbox.active .lightbox-content {
+    transform: scale(1);
+}
+
+.lightbox-content img {
+    width: 100%;
+    max-height: 55vh;
+    object-fit: contain;
+    background: #0b1220;
+}
+
+.lightbox-caption {
+    padding: 1.25rem 1.5rem;
+}
+
+.lightbox-caption h5 {
+    color: var(--white);
+    font-size: 1.05rem;
+    margin-bottom: 0.35rem;
+}
+
+.lightbox-caption p {
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.lightbox-counter {
+    display: inline-block;
+    font-size: 0.75rem;
+    color: var(--accent);
+    letter-spacing: 1px;
+}
+
+.lightbox-close,
+.lightbox-nav {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    color: var(--white);
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.lightbox-close:hover,
+.lightbox-nav:hover {
+    background: var(--primary);
+    border-color: var(--primary);
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+}
+
+.lightbox-nav.hidden {
+    visibility: hidden;
+}
+
+@media (max-width: 700px) {
+    .hobby-lightbox {
+        padding: 1rem;
+        gap: 0.5rem;
+    }
+
+    .lightbox-close {
+        top: 12px;
+        right: 12px;
+    }
+
+    .lightbox-nav {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* ============================================
+   VLOG SHOWCASE
+   ============================================ */
+
+/* Outer card, same glass treatment as your other cards */
+.vlog-showcase {
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius);
+    padding: 2rem;
+    margin-top: 3rem;   /* space above, separating it from the hobby grid */
+}
+
+/* Header row: badge + title side by side */
+.vlog-header {
+    display: flex;           /* puts badge and text next to each other */
+    align-items: center;     /* vertically centers them */
+    gap: 1rem;                /* space between badge and text */
+    margin-bottom: 1.5rem;
+}
+
+.vlog-badge {
+    margin-bottom: 0;   /* override .hobby-badge's default bottom margin
+                           since it's inline here, not stacked */
+    flex-shrink: 0;      /* stops the badge from squishing on small screens */
+}
+
+.vlog-header h3 {
+    color: var(--white);
+    font-size: 1.3rem;
+    margin-bottom: 0.25rem;
+}
+
+.vlog-header p {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* THE RESPONSIVE PART:
+   aspect-ratio: 16/9 tells the browser "however wide this box ends up
+   being (100% of its parent), make the height exactly 9/16 of that
+   width." That's what keeps the video's proportions correct on every
+   screen size without you writing a single media query for it. */
+.vlog-player {
+    position: relative;         /* lets the play button be positioned
+                                    absolutely INSIDE this box */
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: var(--radius);
+    overflow: hidden;           /* clips the video's corners to match
+                                    the rounded border */
+    background: #000;           /* letterbox color if the video's own
+                                    ratio doesn't perfectly match 16:9 */
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--glass-border);
+}
+
+/* The video fills its box completely */
+.vlog-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;   /* crops instead of stretching/distorting if the
+                            source file isn't exactly 16:9 */
+    display: block;
+    cursor: pointer;      /* clicking the video itself also toggles play */
+}
+
+/* The big circular play button, centered on top of the video */
+.vlog-play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);  /* true centering regardless of
+                                           the button's own size */
+    width: 84px;
+    height: 84px;
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: var(--white);
+    font-size: 2rem;
+    cursor: pointer;
+    box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.55);  /* start of the pulse ring, see animation below */
+    animation: vlogPulse 2.4s ease-out infinite;   /* gentle "click me" pulse */
+    transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.vlog-play-btn:hover {
+    transform: translate(-50%, -50%) scale(1.08);
+}
+
+/* The pulsing glow ring animation */
+@keyframes vlogPulse {
+    0%   { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.55); }
+    70%  { box-shadow: 0 0 0 22px rgba(37, 99, 235, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0); }
+}
+
+/* This class gets added by JS the moment the video starts playing --
+   it fades the button out and stops it intercepting clicks so the
+   native video controls (which appear once playing) work normally */
+.vlog-player.is-playing .vlog-play-btn {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Small screens: shrink the button a bit so it doesn't dominate a
+   narrow phone-width video */
+@media (max-width: 480px) {
+    .vlog-play-btn {
+        width: 60px;
+        height: 60px;
+        font-size: 1.4rem;
+    }
+}
+
 /* ============================================
    CONTACT SECTION
    ============================================ */
@@ -936,7 +1340,7 @@ a {
     transform: translateY(20px);
     transition: var(--transition);
     z-index: 999;
-    box-shadow: 0 4px 20px rgba(37, 99, 235, 0.4);
+    box-shadow: 0 4px 20px rgba(3, 76, 233, 0.4);
 }
 
 .back-to-top.show {
@@ -947,7 +1351,7 @@ a {
 
 .back-to-top:hover {
     transform: translateY(-4px);
-    box-shadow: 0 8px 30px rgba(37, 99, 235, 0.5);
+    box-shadow: 0 8px 30px rgba(242, 2, 2, 0.5);
 }
 
 /* ============================================
