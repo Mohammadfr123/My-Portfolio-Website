@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initHobbyFilter();
     initHobbyLightbox()
     initVlogPlayer(); 
+    initHobbyVideoAutoplay(); 
 });
 
 /* ---- Navbar scroll effect & active links ---- */
@@ -222,6 +223,33 @@ function initHobbyLightbox() {
         lightbox.setAttribute('aria-hidden', 'false');
         document.body.style.overflow = 'hidden';
     }
+
+/* ---- Hobbies: autoplay a card's video only while it's on screen ---- */
+function initHobbyVideoAutoplay() {
+    const videos = document.querySelectorAll('.hobby-video');
+    if (!videos.length) return;
+
+    // Respect users who've asked their OS/browser for reduced motion --
+    // don't force movement on people who've explicitly opted out of it
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduceMotion) return;
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.play().catch(() => {
+                    // Some browsers still block autoplay in edge cases --
+                    // fail silently rather than throwing a console error
+                });
+            } else {
+                entry.target.pause();
+            }
+        });
+    }, { threshold: 0.5 }); // half the card has to be visible before it plays
+
+    videos.forEach(video => observer.observe(video));
+}
+
 
     function closeLightbox() {
         lightbox.classList.remove('active');

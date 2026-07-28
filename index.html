@@ -35,7 +35,7 @@
                     <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
                     <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
                     <li class="nav-item"><a href="#Hobbies" class="nav-link">Hobbies</a></li>
-                    <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                    <li class="nav-item"><a href="#contactForm" class="nav-link">contact</a></li>
                 </ul>
                 <a href="#contact" class="btn btn-primary ms-lg-4 mt-3 mt-lg-0">Hire Me</a>
             </div>
@@ -73,7 +73,7 @@
                 <a href="assets/images/CV/CV_FarhaanKhuroolah (2).pdf" class="btn btn-primary btn-lg" download>
                     <i class="bi bi-download me-2"></i>Download CV
                 </a>
-                <a href="#contact" class="btn btn-outline-light btn-lg ms-3">
+                <a href="#contactForm" class="btn btn-outline-light btn-lg ms-3">
                     <i class="bi bi-envelope me-2"></i>Contact Me
                 </a>
             </div>
@@ -316,26 +316,39 @@
 
             <div class="row g-4" id="hobbyGrid">
 
-                <div class="col-md-6 col-lg-4 reveal hobby-col" data-category="combat">
-                    <div class="hobby-card"
-                         data-title="MMA, Grappling, Muay Thai"
-                         data-desc="Learning martial arts and improving physical fitness."
-                         data-images='["assets/images/hobbies/mma-1.jpg","assets/images/hobbies/mma-2.jpg"]'>
-                        <div class="hobby-media">
-                            <div class="hobby-fallback"><i class="bi bi-lightning-charge-fill"></i></div>
-                            <img src="assets/images/hobbies/mma-1.jpg" alt="MMA and grappling training" loading="lazy" onerror="this.style.display='none'">
-                            <button class="hobby-expand" aria-label="Open gallery for MMA, Grappling, Muay Thai">
-                                <i class="bi bi-arrows-angle-expand"></i>
-                            </button>
-                        </div>
-                        <div class="hobby-body">
-                            <span class="hobby-badge"><i class="bi bi-lightning-charge-fill"></i></span>
-                            <h4>MMA, Grappling, Muay Thai</h4>
-                            <p>Learning martial arts and improving physical fitness.</p>
-                        </div>
-                    </div>
-                </div>
+         <div class="col-md-6 col-lg-4 reveal hobby-col" data-category="combat">
+    <div class="hobby-card"
+         data-title="MMA, Grappling, Muay Thai"
+         data-desc="Learning martial arts and improving physical fitness."
+         data-images='["assets/images/hobbies/mma-1.jpg","assets/images/hobbies/mma-2.jpg"]'>
 
+        <div class="hobby-media" data-video>
+            <div class="hobby-fallback"><i class="bi bi-lightning-charge-fill"></i></div>
+
+            <video
+                class="hobby-video"
+                src="assets/images/hobbies/MMA.mp4"
+                poster="assets\images\Hobbies\gym.jpg"
+                muted
+                loop
+                playsinline
+                preload="metadata">
+            </video>
+
+            <span class="hobby-video-badge"><i class="bi bi-camera-video-fill"></i> Clip</span>
+
+            <button class="hobby-expand" aria-label="Open gallery for MMA, Grappling, Muay Thai">
+                <i class="bi bi-arrows-angle-expand"></i>
+            </button>
+        </div>
+
+        <div class="hobby-body">
+            <span class="hobby-badge"><i class="bi bi-lightning-charge-fill"></i></span>
+            <h4>MMA, Grappling, Muay Thai</h4>
+            <p>Learning martial arts and improving physical fitness.</p>
+        </div>
+    </div>
+</div>
                 <div class="col-md-6 col-lg-4 reveal hobby-col" data-category="combat">
                     <div class="hobby-card"
                          data-title="Gym"
@@ -355,15 +368,35 @@
                         </div>
                     </div>
                 </div>
+                
+                <div class="col-md-6 col-lg-4 reveal hobby-col" data-category="outdoor">
+                    <div class="hobby-card"
+                         data-title="Football"
+                         data-desc="Playing soccer for fun and fitness"
+                        data-images='["assets\images\Hobbies\football.jpg","assets\images\Hobbies\gym2.jpg"]'>
+                        <div class="hobby-media">
+                            <div class="hobby-fallback"><i class="bi bi-activity"></i></div>
+                            <img src="assets\images\Hobbies\football.jpg" alt="Gym workout" loading="lazy" onerror="this.style.display='none'">
+                            <button class="hobby-expand" aria-label="Open gallery for Gym">
+                                <i class="bi bi-arrows-angle-expand"></i>
+                            </button>
+                        </div>
+                        <div class="hobby-body">
+                            <span class="hobby-badge"><i class="bi bi-activity"></i></span>
+                            <h4>Football</h4>
+                            <p>Playing football for fun and fitness</p>
+                        </div>
+                    </div>
+                </div>
 
                 <div class="col-md-6 col-lg-4 reveal hobby-col" data-category="creative">
                     <div class="hobby-card"
                          data-title="Photography"
                          data-desc="Capturing moments and exploring creative photography techniques."
-                         data-images='["assets/images/hobbies/photography-1.jpg","assets/images/hobbies/photography-2.jpg"]'>
+                         data-images='["assets\images\Hobbies\photography.jpg","assets\images\Hobbies\photography2.jpg","assets\images\Hobbies\photography3.jpg"]'>
                         <div class="hobby-media">
                             <div class="hobby-fallback"><i class="bi bi-camera-fill"></i></div>
-                            <img src="assets/images/hobbies/photography-1.jpg" alt="Photography" loading="lazy" onerror="this.style.display='none'">
+                            <img src="assets\images\Hobbies\photography.jpg" alt="Photography" loading="lazy" onerror="this.style.display='none'">
                             <button class="hobby-expand" aria-label="Open gallery for Photography">
                                 <i class="bi bi-arrows-angle-expand"></i>
                             </button>
@@ -380,10 +413,10 @@
                     <div class="hobby-card"
                          data-title="Fishing"
                          data-desc="Enjoying the tranquility of the water and the thrill of catching fish."
-                         data-images='["assets/images/hobbies/fishing-1.jpg"]'>
+                         data-images='["assets\images\Hobbies\fishing.jpg"]'>
                         <div class="hobby-media">
                             <div class="hobby-fallback"><span class="emoji-icon">🎣</span></div>
-                            <img src="assets/images/hobbies/fishing-1.jpg" alt="Fishing" loading="lazy" onerror="this.style.display='none'">
+                            <img src="assets\images\Hobbies\fishing.jpg" alt="Fishing" loading="lazy" onerror="this.style.display='none'">
                             <button class="hobby-expand" aria-label="Open gallery for Fishing">
                                 <i class="bi bi-arrows-angle-expand"></i>
                             </button>
@@ -420,10 +453,10 @@
                     <div class="hobby-card"
                          data-title="Horse Riding"
                          data-desc="Enjoying the freedom of riding horses and connecting with these magnificent animals."
-                         data-images='["assets/images/hobbies/horse-riding-1.jpg"]'>
+                         data-images='["assets\images\Hobbies\horseriding.jpeg"]'>
                         <div class="hobby-media">
                             <div class="hobby-fallback"><span class="emoji-icon">🐎</span></div>
-                            <img src="assets/images/hobbies/horse-riding-1.jpg" alt="Horse riding" loading="lazy" onerror="this.style.display='none'">
+                            <img src="assets\images\Hobbies\horseriding.jpeg" alt="Horse riding" loading="lazy" onerror="this.style.display='none'">
                             <button class="hobby-expand" aria-label="Open gallery for Horse Riding">
                                 <i class="bi bi-arrows-angle-expand"></i>
                             </button>
@@ -440,10 +473,10 @@
                     <div class="hobby-card"
                          data-title="Archery"
                          data-desc="Practicing precision and focus while shooting arrows at targets."
-                         data-images='["assets/images/hobbies/archery-1.jpg"]'>
+                         data-images='["assets\images\Hobbies\archery.jpg"]'>
                         <div class="hobby-media">
                             <div class="hobby-fallback"><i class="bi bi-bullseye"></i></div>
-                            <img src="assets/images/hobbies/archery-1.jpg" alt="Archery" loading="lazy" onerror="this.style.display='none'">
+                            <img src="assets\images\Hobbies\archery.jpg" alt="Archery" loading="lazy" onerror="this.style.display='none'">
                             <button class="hobby-expand" aria-label="Open gallery for Archery">
                                 <i class="bi bi-arrows-angle-expand"></i>
                             </button>
@@ -480,10 +513,10 @@
                     <div class="hobby-card"
                          data-title="Cooking and Baking"
                          data-desc="Experimenting with recipes and creating delicious meals."
-                         data-images='["assets/images/hobbies/cooking-1.jpg","assets/images/hobbies/cooking-2.jpg"]'>
+                         data-images='["assets\images\Hobbies\food.jpg","assets/images/hobbies/cooking-2.jpg"]'>
                         <div class="hobby-media">
                             <div class="hobby-fallback"><span class="emoji-icon">🍳</span></div>
-                            <img src="assets/images/hobbies/cooking-1.jpg" alt="Cooking and baking" loading="lazy" onerror="this.style.display='none'">
+                            <img src="assets\images\Hobbies\food.jpg" alt="Cooking and baking" loading="lazy" onerror="this.style.display='none'">
                             <button class="hobby-expand" aria-label="Open gallery for Cooking and Baking">
                                 <i class="bi bi-arrows-angle-expand"></i>
                             </button>
@@ -500,10 +533,10 @@
                     <div class="hobby-card"
                          data-title="Swimming"
                          data-desc="Enjoying the water and staying fit through swimming exercises."
-                         data-images='["assets/images/hobbies/swimming-1.jpg"]'>
+                         data-images='["assets\images\Hobbies\swim.jpg"]'>
                         <div class="hobby-media">
                             <div class="hobby-fallback"><span class="emoji-icon">🏊</span></div>
-                            <img src="assets/images/hobbies/swimming-1.jpg" alt="Swimming" loading="lazy" onerror="this.style.display='none'">
+                            <img src="assets\images\Hobbies\swim.jpg" alt="Swimming" loading="lazy" onerror="this.style.display='none'">
                             <button class="hobby-expand" aria-label="Open gallery for Swimming">
                                 <i class="bi bi-arrows-angle-expand"></i>
                             </button>

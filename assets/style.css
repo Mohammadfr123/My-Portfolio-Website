@@ -816,6 +816,31 @@ HOBBIES AND INTEREST SECTION
     transition: var(--transition);
 }
 
+.hobby-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hobby-video-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--white);
+    background: rgba(15, 23, 42, 0.7);
+    border: 1px solid var(--glass-border);
+    padding: 0.3rem 0.6rem;
+    border-radius: 50px;
+    pointer-events: none;   /* so it never blocks the click that opens the gallery */
+}
+
 .hobby-card:hover {
     transform: translateY(-8px);
     box-shadow: var(--shadow-lg);
